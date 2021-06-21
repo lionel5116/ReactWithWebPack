@@ -26,7 +26,7 @@ class Login extends React.Component {
         this.state.environment == "local" | this.state.environment == "prod") {
 
         if (this.state.userName !== "lioneljones5116@gmail.com") {
-          alert("You are not authorized to use this system...")
+          alert("You are not authorized to use this system..unless you have permission.")
           return;
         }
       }
