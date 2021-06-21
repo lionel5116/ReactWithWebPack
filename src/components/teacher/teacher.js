@@ -11,29 +11,19 @@ class Teacher extends React.Component {
 
     constructor(props){
       super(props);
+      
       this.state = {
         teacherName: '',
         teacherSubject: '',
         isCertified: '',
         gradeLevel: '',
-        userName:''
       };
+      
     };
     
     componentDidMount(){
-        const stateData = store.getState();
-        console.log("The enviorment you are in is " + stateData.redLogin.environment);
-        const environment  = stateData.redLogin.environment;
-        const userName  = stateData.redLogin.userName;
-        const password  = stateData.redLogin.password;
-    
-        this.setState({
-            userName: userName,
-            password: password,
-            environment: environment,
-            userName:userName
-          })
-    
+          //WE MAPPED OUR STATE=>PROPS !!!! (SO THE SYNTAX WOULD "NOT BE" this.state.props)
+          console.log("The enviorment you are in is " + this.props.environment)  
     }
 
   handleTextChange(e) {
@@ -43,7 +33,7 @@ class Teacher extends React.Component {
     }
 
     proceedToNothing() {
-        console.log("Current Logged in User is " + this.state.userName );
+        console.log("Current Logged in User is " + this.props.userName );
     }
 
 
@@ -115,7 +105,10 @@ const mapStateToProps = (state) => {
     teacherName: state.redTeacher.teacherName,
     teacherSubject: state.redTeacher.teacherSubject,
     isCertified: state.redTeacher.isCertified,
-    gradeLevel: state.redTeacher.gradeLevel
+    gradeLevel: state.redTeacher.gradeLevel,
+    userName:state.redLogin.userName,
+    environment: state.redLogin.environment,
+    password:state.redLogin.password
   };
 };
 
