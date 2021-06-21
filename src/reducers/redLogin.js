@@ -1,10 +1,7 @@
-const initialState = {
-    userName: '',
-    password: '',
-    environment: '' 
-};
+import initialState from './initialState';
 
-export default function redLogin(state = initialState,action) {
+
+export default function redLogin(state = initialState.login,action) {
   console.log(action.type);
   console.log(action.environment);
   switch(action.type) {

@@ -117,9 +117,11 @@ class Login extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
+    
     userName: state.redLogin.userName,
     password: state.redLogin.password,
     environment: state.redLogin.environment,
+
   };
 };
 

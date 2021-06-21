@@ -1,11 +1,6 @@
-const initialState = {
-    teacherName: '',
-    teacherSubject: '',
-    isCertified: ''  ,
-    gradeLevel: '' 
-};
+import initialState from './initialState';
 
-export default function redTeacher(state = initialState,action) {
+export default function redTeacher(state = initialState.teacher,action) {
     switch(action.type) {
        case 'TEACHER_DATA':
          return {

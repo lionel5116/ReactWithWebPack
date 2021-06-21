@@ -102,13 +102,16 @@ class Teacher extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
+    
     teacherName: state.redTeacher.teacherName,
     teacherSubject: state.redTeacher.teacherSubject,
     isCertified: state.redTeacher.isCertified,
     gradeLevel: state.redTeacher.gradeLevel,
+
     userName:state.redLogin.userName,
     environment: state.redLogin.environment,
     password:state.redLogin.password
+    
   };
 };
 
