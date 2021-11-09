@@ -23,7 +23,10 @@ module.exports = {
         // This is where webpack-dev-server serves your bundle
         // which is created in memory.  In this example it will be:
         //   http://localhost/assets/bundle.js
-        publicPath: '/assets/',
+        //publicPath: '/dist/bundle.js',
+        publicPath: "/",
+        contentBase: "./dist",
+        hot: true
       },
       devtool: 'source-map',
       plugins: [new webpack.SourceMapDevToolPlugin({})],
