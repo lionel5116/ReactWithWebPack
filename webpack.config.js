@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -24,5 +25,7 @@ module.exports = {
         //   http://localhost/assets/bundle.js
         publicPath: '/assets/',
       },
+      devtool: 'source-map',
+      plugins: [new webpack.SourceMapDevToolPlugin({})],
 
 }
