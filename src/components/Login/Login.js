@@ -50,6 +50,10 @@ class Login extends React.Component {
 
   }
 
+  proceedStudentInfo() {
+    this.props.history.push("/StudentInformation");
+  }
+
   handleTextChange(e) {
       let fieldName = e.target.name;
       let fleldVal = e.target.value;
@@ -107,6 +111,10 @@ class Login extends React.Component {
                     <Button variant="primary" type="button"
                       onClick={() => this.proceedToTeacher()}>
                         Submit
+                    </Button>
+                    <Button variant="warning" type="button"
+                      onClick={() => this.proceedStudentInfo()}>
+                        Student Information Report
                     </Button>
                     </Form>
                 </Container>

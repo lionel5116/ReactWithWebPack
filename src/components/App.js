@@ -5,6 +5,7 @@ import {Form,FormControl,NavDropdown,Container} from 'react-bootstrap';
 import NavbarMain from './NavbarMain/NavbarMain';
 import Login from './Login/Login';
 import Teacher from './teacher/teacher';
+import StudentInformation from './StudentInformation/StudentInformation';
 import './App.css';
 
 function App() {
@@ -27,6 +28,12 @@ function App() {
             exact
             path='/Teacher'
             component={Teacher}
+          />
+
+            <Route
+            exact
+            path='/StudentInformation'
+            component={StudentInformation}
           />
         </HashRouter>
       </div>     
