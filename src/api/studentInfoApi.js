@@ -28,7 +28,6 @@ export class studentInfoApi {
     }
 
    async  getSampleSudentDataAxios(){
-       //return await axios.get(`http://appsdev.houstonisd.org/HISDDevAppsWEBAPI/api/StudentEntryData/getStudentInformationDataTop25Rows/`)
        var url = Config.REST_URL + '/api/StudentEntryData/getStudentInformationDataTop25Rows/'
        return await axios.get(url)
         .then(res => {
