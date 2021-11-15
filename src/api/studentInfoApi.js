@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Config from './config';
+import axios from 'axios';
 
 export class studentInfoApi {
    static getSampleSudentData(){
@@ -26,7 +27,13 @@ export class studentInfoApi {
         });     
     }
 
+   async  getSampleSudentDataAxios(){
+       return await axios.get(`http://appsdev.houstonisd.org/HISDDevAppsWEBAPI/api/StudentEntryData/getStudentInformationDataTop25Rows/`)
+        .then(res => {
+              return res.data;
+        });
 
+    }
 }
 
 export default studentInfoApi
