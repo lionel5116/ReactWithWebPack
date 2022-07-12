@@ -1,10 +1,9 @@
 import {combineReducers} from 'redux'
-import redTeacher from './redTeacher';
-import redLogin from './redLogin';
+import Login from './Login';
+
 
 const allReducers = combineReducers({
-    redTeacher,
-    redLogin
+    Login
 })
  
 export default allReducers;

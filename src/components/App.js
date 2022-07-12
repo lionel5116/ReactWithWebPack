@@ -4,8 +4,7 @@ import { BrowserRouter,Route,HashRouter } from 'react-router-dom'
 import {Form,FormControl,NavDropdown,Container} from 'react-bootstrap';
 import NavbarMain from './NavbarMain/NavbarMain';
 import Login from './Login/Login';
-import Teacher from './teacher/teacher';
-import StudentInformation from './StudentInformation/StudentInformation';
+import test from './Login/test';
 import './App.css';
 
 function App() {
@@ -23,17 +22,10 @@ function App() {
             path='/Login'
             component={Login}
           />
-
-          <Route
-            exact
-            path='/Teacher'
-            component={Teacher}
-          />
-
             <Route
             exact
-            path='/StudentInformation'
-            component={StudentInformation}
+            path='/test'
+            component={test}
           />
         </HashRouter>
       </div>     
